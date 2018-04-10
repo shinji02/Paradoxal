@@ -6,18 +6,23 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 public class Message_Control {
+	
+	public Message_Control() {
+		
+	}
+	
 	ConsoleCommandSender console_send = Bukkit.getConsoleSender();
 	
-	public void send_console_error(String msg) {
-		console_send.sendMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.RED+"[Error] "+msg+ChatColor.RESET);
+	public void send_console_error(String msg,String IA) {
+		console_send.sendMessage(ChatColor.GOLD+"["+IA+"] "+ChatColor.RED+"[Error] "+msg+ChatColor.RESET);
 	}
 	
-	public void send_console_debug(String msg) {
-		console_send.sendMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.AQUA+"[Debug] "+msg+ChatColor.RESET);
+	public void send_console_debug(String msg,String IA) {
+		console_send.sendMessage(ChatColor.GOLD+"["+IA+"] "+ChatColor.AQUA+"[Debug] "+msg+ChatColor.RESET);
 	}
 	
-	public void send_console_succes(String msg) {
-		console_send.sendMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.GREEN+"[Sucess] "+msg+ChatColor.RESET);
+	public void send_console_succes(String msg,String IA) {
+		console_send.sendMessage(ChatColor.GOLD+"["+IA+"] "+ChatColor.GREEN+"[Sucess] "+msg+ChatColor.RESET);
 	}
 	
 	public void send_player_error(Player player,String msg) {
