@@ -13,3 +13,24 @@ commands:
   chaos:
     description: Commande Chaos
     permission: iv.chaos.use
+
+permissions:
+  iv.*:
+    description: Donne accées à tout les commande de IV
+    children:
+    iv.panel.*: true
+    iv.panel.use: true
+  iv.panel.*:
+    description: Donne accées à tout le fonction du panel
+  iv.panel.use:
+    description: Autorise l'accées aux panel
+  iv.ultima.*:
+    description: Donne accées à tout les commande de Ultima
+  iv.exodus.*:
+    description: Donne accées à tout les commandes de Exodus
+  iv.chaos.*:
+    description: Donne accées à tout les commandes de Chaos
+  iv.zalera.*:
+    description: Donne accées à tout les commande de Zaléra
+  
+    
