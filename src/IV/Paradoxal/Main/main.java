@@ -16,7 +16,7 @@ public class main extends JavaPlugin{
 	
 	@Override
 	public void onEnable() {
-		
+		Start_Zalera();
 	}
 	
 	@Override
@@ -29,7 +29,8 @@ public class main extends JavaPlugin{
 	}
 	
 	private void Start_Zalera() {
-		zalera = new Zalera();
+		zalera = new Zalera(this);
+		zalera.Start_IA();
 	}
 	
 	private void Start_Chaos() {
