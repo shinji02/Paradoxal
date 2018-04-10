@@ -48,4 +48,13 @@ public class Message_Control {
 	public void console_load(String msg) {
 		console_send.sendMessage(ChatColor.LIGHT_PURPLE+"[Load] "+ChatColor.AQUA+msg+ChatColor.RESET);
 	}
+	
+	public void msg_connect(Player player,String date,String heure) {
+		Bukkit.broadcastMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.BLUE+player.getName()+ChatColor.GREEN+" viens de se connecter aux serveur."+ChatColor.RESET);
+		player.sendMessage("Votre denniere connection datent du "+date+" à "+heure+ChatColor.RESET);
+	}
+	
+	public void msg_connect_first(Player player) {
+		player.sendMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.BLUE+player.getName()+ChatColor.GREEN+" viens de se connecter aux serveur pour la premier fois."+ChatColor.RESET);
+	}
 }
