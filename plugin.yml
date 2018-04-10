@@ -4,3 +4,12 @@ description: Plugin IA du serveur paradoxal
 author: Arisa02
 main: IV.Paradoxal.Main.main
 database: false
+
+commands:
+  panel:
+    description: Ouvrir le menu
+    aliases: [ugui,gui]
+    permission: iv.panel.use
+  chaos:
+    description: Commande Chaos
+    permission: iv.chaos.use
