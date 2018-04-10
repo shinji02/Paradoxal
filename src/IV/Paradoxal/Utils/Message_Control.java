@@ -62,4 +62,7 @@ public class Message_Control {
 	{
 		Bukkit.broadcastMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.BLUE+player.getName()+ChatColor.GREEN+" viens de se déconnecter du serveur ."+ChatColor.RESET);
 	}
+	public void msg_death(String killed, String killer) {
+		Bukkit.broadcastMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.BLUE+killed+ChatColor.GREEN+"à été tuée par "+killer+ChatColor.RESET);
+	}
 }
