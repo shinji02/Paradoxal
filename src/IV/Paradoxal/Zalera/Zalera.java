@@ -75,7 +75,7 @@ public class Zalera {
 			if(verif2==1)
 			{
 				verif3=Create_Command();
-				if(verif3==2)
+				if(verif3==1)
 				{
 					config_zalera.set("Zalera.main.Status", 1);
 					msg_ctrl.send_console_succes("Activation complétér ", "Zalera");
