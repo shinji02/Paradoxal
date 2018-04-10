@@ -1,0 +1,6 @@
+name: Paradoxal
+version: 1.0
+description: Plugin IA du serveur paradoxal
+author: Arisa02
+main: IV.Paradoxal.Main.main
+database: false
