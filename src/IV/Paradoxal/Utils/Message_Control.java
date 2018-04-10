@@ -60,6 +60,6 @@ public class Message_Control {
 	
 	public void msg_deconnect(Player player)
 	{
-		player.sendMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.BLUE+player.getName()+ChatColor.GREEN+" viens de se déconnecter du serveur ."+ChatColor.RESET);
+		Bukkit.broadcastMessage(ChatColor.GOLD+"[Zalera] "+ChatColor.BLUE+player.getName()+ChatColor.GREEN+" viens de se déconnecter du serveur ."+ChatColor.RESET);
 	}
 }
