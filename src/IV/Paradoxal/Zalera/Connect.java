@@ -8,6 +8,7 @@ import java.util.Date;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
@@ -16,6 +17,7 @@ import IV.Paradoxal.Utils.Message_Control;
 public class Connect implements Listener {
 	Message_Control msg_crl = new Message_Control();
 	
+	@EventHandler
 	public void onjoin(PlayerJoinEvent event) {
 		File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+event.getPlayer().getName()+".yml");
 		FileConfiguration config_file = null;

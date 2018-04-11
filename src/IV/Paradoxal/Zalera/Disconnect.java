@@ -8,6 +8,7 @@ import java.util.Date;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
@@ -17,6 +18,7 @@ public class Disconnect implements Listener {
 
 	Message_Control msg_crtl = new Message_Control();
 	
+	@EventHandler
 	public void onQuit(PlayerQuitEvent event) {
 		File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+event.getPlayer().getName()+".yml");
 		FileConfiguration config_file = null;
