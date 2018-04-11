@@ -87,11 +87,35 @@ public class Death implements Listener {
 		}
 		if(player instanceof Spider)
 		{
+			msg_crl.msg_death(player.getName(), "Araignée");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
+			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
+			int last_death = config_file.getInt("Player.Stats.death");
+			int new_death = last_death+1;
 			
+			config_file.set("Player.Stats.death", new_death);
+			
+			try {
+				config_file.save(file_player);
+			}catch (IOException e) {
+				msg_crl.send_console_error(e.getMessage(), "Zalera");
+			}
 		}
 		if(player instanceof Enderman)
 		{
+			msg_crl.msg_death(player.getName(), "Enderman");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
+			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
+			int last_death = config_file.getInt("Player.Stats.death");
+			int new_death = last_death+1;
 			
+			config_file.set("Player.Stats.death", new_death);
+			
+			try {
+				config_file.save(file_player);
+			}catch (IOException e) {
+				msg_crl.send_console_error(e.getMessage(), "Zalera");
+			}
 		}
 		if(player instanceof CaveSpider)
 		{
