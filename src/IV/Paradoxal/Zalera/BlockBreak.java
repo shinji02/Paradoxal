@@ -3,8 +3,6 @@ package IV.Paradoxal.Zalera;
 import java.io.File;
 import java.io.IOException;
 
-import javax.swing.text.StyleContext.SmallAttributeSet;
-
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -55,16 +53,52 @@ public class BlockBreak implements Listener {
 			}
 		}
 		if(block_break.getType()==Material.LAPIS_ORE) {
+			int last_Lapis_core = config_player.getInt("Player.Block.Lapis_ore");
+			int new_Lapis_Core = last_Lapis_core+1;
 			
+			config_player.set("Player.Block.Lapis_ore", new_Lapis_Core);
+			
+			try {
+				config_player.save(file_player);
+			} catch (IOException e) {
+				msg_crtl.send_console_error(e.getMessage(),"Zalera");
+			}
 		}
 		if(block_break.getType()==Material.REDSTONE_ORE) {
+			int last_red_ore = config_player.getInt("Player.Block.Redstone_ore");
+			int new_red_ore = last_red_ore+1;
 			
+			config_player.set("Player.Block.Redstone_ore", new_red_ore);
+			
+			try {
+				config_player.save(file_player);
+			} catch (IOException e) {
+				msg_crtl.send_console_error(e.getMessage(),"Zalera");
+			}
 		}
 		if(block_break.getType()==Material.EMERALD_ORE) {
+			int last_emerd_ore = config_player.getInt("Player.Block.Emerload_ore");
+			int new_emerd_ore = last_emerd_ore+1;
 			
+			config_player.set("Player.Block.Emerload_ore", new_emerd_ore);
+			
+			try {
+				config_player.save(file_player);
+			} catch (IOException e) {
+				msg_crtl.send_console_error(e.getMessage(),"Zalera");
+			}
 		}
 		if(block_break.getType()==Material.DIAMOND_ORE) {
+			int last_diamond_ore = config_player.getInt("Player.Block.Diamond_Ore");
+			int new_diamond_ore = last_diamond_ore+1;
 			
+			config_player.set("Player.Block.Diamond_Ore", new_diamond_ore);
+			
+			try {
+				config_player.save(file_player);
+			} catch (IOException e) {
+				msg_crtl.send_console_error(e.getMessage(),"Zalera");
+			}
 		}
 	}
 }
