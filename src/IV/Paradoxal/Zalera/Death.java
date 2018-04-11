@@ -134,19 +134,80 @@ public class Death implements Listener {
 			}
 		}
 		if(player instanceof EnderDragon) {
+			msg_crl.msg_death(player.getName(), "l'EnderDragon");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
+			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
+			int last_death = config_file.getInt("Player.Stats.death");
+			int new_death = last_death+1;
 			
+			config_file.set("Player.Stats.death", new_death);
+			
+			try {
+				config_file.save(file_player);
+			}catch (IOException e) {
+				msg_crl.send_console_error(e.getMessage(), "Zalera");
+			}
 		}
 		if(player instanceof Ghast) {
+			msg_crl.msg_death(player.getName(), "Ghast");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
+			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
+			int last_death = config_file.getInt("Player.Stats.death");
+			int new_death = last_death+1;
 			
+			config_file.set("Player.Stats.death", new_death);
+			
+			try {
+				config_file.save(file_player);
+			}catch (IOException e) {
+				msg_crl.send_console_error(e.getMessage(), "Zalera");
+			}
 		}
 		if(player instanceof Golem) {
+			msg_crl.msg_death(player.getName(), "Golem");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
+			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
+			int last_death = config_file.getInt("Player.Stats.death");
+			int new_death = last_death+1;
+			
+			config_file.set("Player.Stats.death", new_death);
+			
+			try {
+				config_file.save(file_player);
+			}catch (IOException e) {
+				msg_crl.send_console_error(e.getMessage(), "Zalera");
+			}
 			
 		}
 		if(player instanceof Guardian) {
+			msg_crl.msg_death(player.getName(), "Guardian");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
+			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
+			int last_death = config_file.getInt("Player.Stats.death");
+			int new_death = last_death+1;
 			
+			config_file.set("Player.Stats.death", new_death);
+			
+			try {
+				config_file.save(file_player);
+			}catch (IOException e) {
+				msg_crl.send_console_error(e.getMessage(), "Zalera");
+			}
 		}
 		if(player instanceof PigZombie) {
+			msg_crl.msg_death(player.getName(), "Cochons-zombies");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
+			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
+			int last_death = config_file.getInt("Player.Stats.death");
+			int new_death = last_death+1;
 			
+			config_file.set("Player.Stats.death", new_death);
+			
+			try {
+				config_file.save(file_player);
+			}catch (IOException e) {
+				msg_crl.send_console_error(e.getMessage(), "Zalera");
+			}
 		}
 		if(player instanceof Shulker) {
 			
