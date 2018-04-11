@@ -40,7 +40,7 @@ public class Death implements Listener {
 		if(player instanceof Zombie)
 		{
 			msg_crl.msg_death(player.getName(), "Zombie");
-			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+event.getEntity().getName()+".yml");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
 			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
 			int last_death = config_file.getInt("Player.Stats.death");
 			int new_death = last_death+1;
@@ -55,7 +55,17 @@ public class Death implements Listener {
 		}
 		if(player instanceof Skeleton)
 		{
+			msg_crl.msg_death(player.getName(), "Squelette");
+			File file_player = new File("Paradoxal"+File.separator+"Players"+File.separator+player.getName()+".yml");
+			FileConfiguration config_file= YamlConfiguration.loadConfiguration(file_player);
+			int last_death = config_file.getInt("Player.Stats.death");
+			int new_death = last_death+1;
 			
+			config_file.set("Player.Stats.death", new_death);
+			
+			try {
+				config_file.save(file_player);
+			}catch (IOException e) {			
 		}
 		if(player instanceof Creeper)
 		{
