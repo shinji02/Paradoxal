@@ -65,7 +65,9 @@ public class Death implements Listener {
 			
 			try {
 				config_file.save(file_player);
-			}catch (IOException e) {			
+			}catch (IOException e) {
+				msg_crl.send_console_error(e.getMessage(), "Zalera");
+			}
 		}
 		if(player instanceof Creeper)
 		{
